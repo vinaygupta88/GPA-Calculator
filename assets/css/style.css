@@ -61,3 +61,35 @@ body {
   font-size: 1.5rem;
   cursor: pointer;
 }
+/* --------- Navbar media query for phone  */
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    right: 20px;
+    top: 60px;
+    background: #004080;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  #menu-toggle {
+    display: block;
+  }
+}
+
+
+/*------------ Footer ----------*/
+footer {
+  margin-top: auto;
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
