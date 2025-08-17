@@ -6,8 +6,8 @@
 }
 
 body {
-  background: linear-gradient(145deg, #85a983, #b4ddd4); 
-  color: #0d1b2a; /* dark text for readability */
+  background: linear-gradient(145deg, #b3bab3, #dee7e5); 
+  color: #0d1b2a;
   font-family: Arial, sans-serif;
   display: flex;
   flex-direction: column;
@@ -16,7 +16,7 @@ body {
 
 /*--------------- Navbar ----------------*/
 .navbar {
-  background: #004080;
+  background: #4084c7;
   color: white;
   display: flex;
   justify-content: space-between;
@@ -27,19 +27,18 @@ body {
   z-index: 100;
 }
 .logo {
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   font-weight: bold;
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.7rem;
   margin-left: 10px;
 }
 
 .logo-img {
-  height: 35px; 
-  width: 35px;
+  height: 40px; 
+  width: 40px;
   object-fit: contain;
-  border-radius: 50%;
 }
 
 .nav-links {
@@ -49,6 +48,16 @@ body {
 }
 
 .nav-links li a {
-  color: white;
+  color: rgb(255, 255, 255);
   text-decoration: none;
+  font-weight: bold;
+}
+.nav-links li a:hover{
+    color: rgb(217, 231, 32);
+}
+
+#menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
 }
