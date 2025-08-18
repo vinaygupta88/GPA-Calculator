@@ -17,7 +17,6 @@ document.querySelectorAll('nav a').forEach(link => {
       });
     }
 
-    // For mobile: hide menu after selection
     document.getElementById('nav-links').classList.remove('show');
   });
 });
