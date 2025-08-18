@@ -185,7 +185,7 @@ section h2, section h1 {
   line-height: 1.6;
 }
 
-/* media query for hoe content */
+/* media query for home content */
 @media (max-width: 768px) {
   .slides img {
     height: 200px;
@@ -242,4 +242,52 @@ section h2, section h1 {
 }
 .fade-in, .fade-in p {
   will-change: opacity, transform;
+}
+
+/* ----------- About Section -------- */
+.about-container {
+  width: 80%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.about-container h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 30px;
+  align-items: start;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 450px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-content p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 15px;
+  color: #555;
+  text-align: justify;
+}
+
+/*** Media query for about section *****/
+@media (max-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .about-image {
+    text-align: center;
+  }
 }
