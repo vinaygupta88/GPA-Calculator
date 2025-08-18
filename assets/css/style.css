@@ -103,7 +103,7 @@ body {
 
 .slide-track {
   display: flex;
-  width: calc(300px * 6); /* 6 images × 300px width */
+  width: calc(300px * 6); 
   animation: scroll 15s linear infinite;
 }
 
@@ -120,6 +120,31 @@ body {
   background-color: #fff;
 }
 /* ------ media query for slider */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-900px); 
+  }
+}
+
+
+@media (max-width: 768px) {
+  .slider {
+    height: 200px;
+  }
+
+  .slide {
+    width: 250px;
+    height: 200px;
+  }
+
+  .slide-track {
+    width: calc(250px * 6); 
+    animation: scroll 18s linear infinite;
+  }
+}
 
 /*------------ Footer ----------*/
 footer {
