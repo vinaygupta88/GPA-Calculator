@@ -146,15 +146,6 @@ body {
   }
 }
 
-/*------------ Footer ----------*/
-footer {
-  margin-top: auto;
-  background: #222;
-  color: white;
-  text-align: center;
-  padding: 15px;
-}
-
 /* ------------ Main Section -------------- */
 section {
   padding: 60px 20px;
@@ -291,4 +282,73 @@ section h2, section h1 {
   .about-image {
     text-align: center;
   }
+}
+
+/***** CONTACT SECTION *****/
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin:30px 00px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background: rgb(173, 224, 224);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.contact-form h3 {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 2rem;
+  color: #c469ce;
+  font-weight: bold;
+}
+
+.contact-form hr {
+  width: 50%;
+  height: 5px;
+  background: #000000;
+  border: none;
+  border-radius: 10px;
+  margin: auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  font-size: 1rem;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  outline: none;
+  width: 80%;
+  margin: auto;
+}
+
+.contact-form button {
+  width: 150px;
+  padding: 12px;
+  background-color: #004080;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  margin: 0 auto;
+  font-size: 1rem;
+}
+.contact-form button:hover{
+  background-color: rgb(131, 169, 75);
+}
+
+/*------------ Footer ----------*/
+footer {
+  margin-top: auto;
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 15px;
 }
