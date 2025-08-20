@@ -86,9 +86,29 @@
             </div>
         </div>
       </section>
+
+      <!---------- Contact Section ------>
+      <section id="contact">
+        <h2 class="section-title">Contact</h2>
+        <div class="contact-container">
+          <!-- Feedback Form -->
+          <form action="https://api.web3forms.com/submit" method="POST" class="contact-form" onsubmit="return validateGmail()">
+            <h3>Feedback</h3>
+            <hr>
+            <input type="hidden" name="access_key" value="e660f081-b2bc-4c0f-9021-f69362367823">
+
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" id="email" name="email" placeholder="Your Gmail" required>
+            <p id="message" style="color: red;"></p>
+
+            <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+      </section>
+
     </main>
-
-
 
     <!------------ Footer ----------------------->
     <footer>
