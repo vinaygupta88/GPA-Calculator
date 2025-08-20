@@ -7,20 +7,63 @@
     <link rel="icon" href="assets/Images/logo.png"  type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style1.css">
   </head>
   <body>
     <!----------- Navbar (Sticky) --------------->
     <nav class="navbar">
         <div class="logo"><img src="assets/Images/logo.png" alt="Logo" class="logo-img" />CGPA Campass</div>
             <ul class="nav-links" id="nav-links">
-                <li><a href="">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="calc.html">Calculator</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="">Calculator</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
             </ul>
         <div id="menu-toggle" onclick="toggleMenu()">☰</div>
     </nav>
     
+    <!------------ Main Section ----------------->
+    <main class="main-section">
+      
+      <!-- Understanding Section -->
+      <section class="understanding-section">
+        <h2>Understanding SGPA, YGPA & CGPA</h2>
+        <p>
+          To better understand your academic performance, here’s how the calculations are done:
+        </p>
+
+        <div class="formula-box">
+          <h3>1. Semester Grade Point Average (SGPA)</h3>
+          <p><b>Formula:</b> <br>
+            SGPA = (Σ Credit × Grade Point) ÷ (Σ Credits)</p>
+          <p><b>Example:</b> If you have 3 subjects with credits [4, 3, 2] and grades [A=9, B+=8, A+=10], then:<br>
+            SGPA = (4×9 + 3×8 + 2×10) ÷ (4+3+2) = 79 ÷ 9 = 8.78</p>
+        </div>
+
+        <div class="formula-box">
+          <h3>2. Yearly Grade Point Average (YGPA)</h3>
+          <p><b>Formula:</b> <br>
+            YGPA = (Σ Credit Points of Odd + Even Semester) ÷ (Σ Credits of Odd + Even)</p>
+        </div>
+
+        <div class="formula-box">
+          <h3>3. Cumulative Grade Point Average (CGPA)</h3>
+          <p><b>Formula:</b> <br>
+            CGPA = (Σ Credit Points of All Semesters) ÷ (Σ Total Credits of All Semesters)</p>
+        </div>
+
+        <div class="formula-box">
+          <h3>4. CGPA to Percentage Conversion</h3>
+          <p><b>Formula:</b> Percentage = CGPA  × 10 <br>
+            <b>Example:</b> If CGPA = 8.2, then Percentage = 8.2  × 10 = 82%</p>
+        </div>
+
+        <!-- Grading System Table -->
+        
+      </section>
+
+
+    </main>
 
     <!------------ Footer ----------------------->
     <footer>
