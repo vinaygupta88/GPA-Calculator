@@ -33,3 +33,28 @@
   margin-bottom: 8px;
   color: #152eed;
 }
+/* Grading  */
+.grading-system table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+}
+
+.grading-system th, .grading-system td {
+  padding: 12px;
+  border: 1px solid #ddd;
+}
+
+.grading-system th {
+  background: #152eed;
+  color: white;
+  font-size: 16px;
+}
+
+.grading-system td {
+  font-size: 16px;
+}
