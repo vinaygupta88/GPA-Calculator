@@ -24,7 +24,23 @@
     
     <!------------ Main Section ----------------->
     <main class="main-section">
-      
+      <!--------------- Form section --------->
+      <section class="form-section">
+        <h1>Multi-Scale GPA Calculator</h1>
+        <hr>
+
+        <!-- Radio buttons -->
+        <div class="form-group">
+          <label class="radio-option"><input type="radio" name="calc-type" value="sgpa"> Calculate SGPA</label>
+          <label class="radio-option"><input type="radio" name="calc-type" value="ygpa"> Calculate YGPA</label>
+          <label class="radio-option"><input type="radio" name="calc-type" value="cgpa"> Calculate CGPA</label>
+        </div>
+
+        
+
+        <!-- Button -->
+        <button type="button" onclick="calculate()">Calculate</button>
+      </section>
       <!-- Understanding Section -->
       <section class="understanding-section">
         <h2>Understanding SGPA, YGPA & CGPA</h2>
