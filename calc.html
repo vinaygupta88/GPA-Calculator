@@ -35,8 +35,21 @@
           <label class="radio-option"><input type="radio" name="calc-type" value="ygpa"> Calculate YGPA</label>
           <label class="radio-option"><input type="radio" name="calc-type" value="cgpa"> Calculate CGPA</label>
         </div>
+        <!-- SGPA Container -->
+        <div id="sgpa-container" style="display:none;"></div>
 
-        
+        <!-- YGPA Container -->
+        <div id="ygpa-container" style="display:none;"></div>
+
+        <!-- CGPA Semester input -->
+        <div class="form-group" id="semester-input-section" style="display:none;">
+          <label for="num-semesters">Number of Semesters (2–10):</label>
+          <input type="range" id="num-semesters" min="2" max="10" step="1"/>
+          <span id="semester-value">2</span>
+        </div>
+
+        <!-- CGPA dynamic container -->
+        <div id="semesters-container"></div>
 
         <!-- Button -->
         <button type="button" onclick="calculate()">Calculate</button>
