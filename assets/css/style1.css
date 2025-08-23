@@ -46,6 +46,23 @@ input[type=range] {
     padding: 8px; 
 }
 
+/* ------------- Button ------------ */
+button { 
+    padding: 12px 24px; 
+    font-size: 18px; 
+    background-color: #152eed; 
+    color: white; 
+    border: none; 
+    border-radius: 6px; 
+    cursor: pointer; 
+    margin-top: 10px; 
+    margin-left: 45%; 
+    transition: background-color 0.3s ease; 
+}
+button:hover { 
+    background-color: #1de928; 
+}
+
 /*------------ Understanding ------------------*/
 .understanding-section {
   margin-top: 40px;
