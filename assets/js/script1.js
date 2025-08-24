@@ -135,3 +135,46 @@ slider.addEventListener("input", function () {
     row.querySelector('.credit').addEventListener('input', ()=>updateYGPA(row));
   }
 });
+
+//------------ Results ------------
+function calculate() {
+  const selected = document.querySelector('input[name="calc-type"]:checked');
+  if (!selected) return alert("Please select SGPA / YGPA / CGPA");
+
+  let totalCredit=0, totalCP=0, result=0, type=selected.value.toUpperCase();
+
+  if (selected.value === 'sgpa') {
+    document.querySelectorAll('#sgpa-container .subject-row').forEach(row=>{
+      totalCredit += parseInt(row.querySelector('.credit').value)||0;
+      totalCP += parseInt(row.querySelector('.credit-point').value)||0;
+    });
+    result = totalCP/totalCredit;
+  }
+
+  if (selected.value === 'ygpa') {
+    document.querySelectorAll('#ygpa-container .subject-row').forEach(row=>{
+      totalCredit += parseInt(row.querySelector('.credit').value)||0;
+      totalCP += parseFloat(row.querySelector('.credit-point').value)||0;
+    });
+    result = totalCP/totalCredit;
+  }
+
+  if (selected.value === 'cgpa') {
+    document.querySelectorAll('#semesters-container .subject-row').forEach(row=>{
+      totalCredit += parseInt(row.querySelector('.credit').value)||0;
+      totalCP += parseFloat(row.querySelector('.credit-point').value)||0;
+    });
+    result = totalCP/totalCredit;
+  }
+
+// Show in card
+document.getElementById('result-card').style.display="block";
+document.getElementById('card-title').textContent = type + " Result";
+document.getElementById('card-credit').textContent = totalCredit;
+document.getElementById('card-cp').textContent = totalCP.toFixed(2);
+document.getElementById('card-value').textContent = result.toFixed(2);
+const card = document.getElementById('result-card');
+const yOffset = -100;
+const y = card.getBoundingClientRect().top + window.pageYOffset + yOffset;
+window.scrollTo({ top: y, behavior: 'smooth' });
+}
