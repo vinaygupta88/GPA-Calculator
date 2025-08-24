@@ -56,13 +56,66 @@ button {
     border-radius: 6px; 
     cursor: pointer; 
     margin-top: 10px; 
-    margin-left: 45%; 
+    margin-left: 43%; 
     transition: background-color 0.3s ease; 
 }
 button:hover { 
     background-color: #1de928; 
 }
 
+
+/*------------ Result -------------------*/
+.card {
+  background: #ffffff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  max-width: 900px;
+  margin: auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.2);
+}
+
+.card-header {
+  background: linear-gradient(135deg, #152eed, #1de928);
+  padding: 15px;
+  text-align: center;
+}
+.card-header h2 {
+  margin: 0;
+  color:darkgoldenrod;
+  font-size: 30px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.card-body {
+  padding: 20px;
+  text-align: left;
+}
+.card-body p {
+  font-size: 18px;
+  margin: 12px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.result-badge {
+  background: #152eed;
+  color: white;
+  font-weight: bold;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 20px;
+  transition: background 0.3s;
+}
+.card:hover .result-badge {
+  background: #1de928;
+  color: black;
+}
 /*------------ Understanding ------------------*/
 .understanding-section {
   margin-top: 40px;
