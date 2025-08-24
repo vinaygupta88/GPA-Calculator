@@ -54,7 +54,22 @@
         <!-- Button -->
         <button type="button" onclick="calculate()">Calculate</button>
       </section>
-      
+
+      <!----------- Result ----------------->
+      <div id="result-card" style="display:none; margin-top:20px;">
+        <div class="card">
+          <div class="card-header">
+            <h2 id="card-title">Result</h2>
+          </div>
+          <div class="card-body">
+            <p><b>Total Credit:</b> <span id="card-credit"></span></p>
+            <p><b>Total Credit Point:</b> <span id="card-cp"></span></p>
+            <p><b>Final Result:</b> 
+              <span class="result-badge" id="card-value"></span>
+            </p>
+          </div>
+        </div>
+      </div>
       <!-- Understanding Section -->
       <section class="understanding-section">
         <h2>Understanding SGPA, YGPA & CGPA</h2>
@@ -151,6 +166,7 @@
     <!-------------- Script (JS Files) ---------->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
     <script src="assets/js/script.js"></script>
+    <script src="assets/js/script1.js"></script>
 
   </body>
 </html>
