@@ -74,3 +74,35 @@ function updateCreditPoint(row) {
   const grade = parseInt(row.querySelector('.grade').value) || 0;
   row.querySelector('.credit-point').value = credit * grade;
 }
+
+
+// ---------- YGPA Form ----------
+function buildYGPA() {
+  const ygpaContainer = document.getElementById('ygpa-container');
+  ygpaContainer.innerHTML = '';
+  ygpaContainer.style.display = 'block';
+
+  ["Odd Semester", "Even Semester"].forEach((sem, idx) => {
+    const block = document.createElement('div');
+    block.classList.add('ygpa-block');
+    block.innerHTML = `
+      <h3>${sem}</h3>
+      <div class="subject-row">
+        <input type="number" class="sgpa" placeholder="Enter SGPA" step="0.01"/>
+        <input type="number" class="credit" placeholder="Total Credit"/>
+        <input type="text" class="credit-point" placeholder="Credit Point" readonly />
+      </div>
+    `;
+    ygpaContainer.appendChild(block);
+
+    const row = block.querySelector('.subject-row');
+    row.querySelector('.sgpa').addEventListener('input', ()=>updateYGPA(row));
+    row.querySelector('.credit').addEventListener('input', ()=>updateYGPA(row));
+  });
+}
+
+function updateYGPA(row) {
+  const sgpa = parseFloat(row.querySelector('.sgpa').value) || 0;
+  const credit = parseInt(row.querySelector('.credit').value) || 0;
+  row.querySelector('.credit-point').value = (sgpa * credit).toFixed(2);
+}
