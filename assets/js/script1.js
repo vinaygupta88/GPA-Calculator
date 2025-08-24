@@ -106,3 +106,32 @@ function updateYGPA(row) {
   const credit = parseInt(row.querySelector('.credit').value) || 0;
   row.querySelector('.credit-point').value = (sgpa * credit).toFixed(2);
 }
+
+
+// ---------- CGPA Slider logic ----------
+const slider = document.getElementById("num-semesters");
+const valueDisplay = document.getElementById("semester-value");
+slider.addEventListener("input", function () {
+  valueDisplay.textContent = this.value;
+  const container = document.getElementById('semesters-container');
+  container.innerHTML = '';
+  const numSemesters = parseInt(this.value);
+  if (isNaN(numSemesters)) return;
+  for (let i = 1; i <= numSemesters; i++) {
+    const block = document.createElement('div');
+    block.classList.add('semester-block');
+    block.innerHTML = `
+      <h3>Semester ${i}</h3>
+      <div class="subject-row">
+        <input type="number" class="sgpa" placeholder="Enter SGPA" step="0.01"/>
+        <input type="number" class="credit" placeholder="Total Credit"/>
+        <input type="text" class="credit-point" placeholder="Credit Point" readonly />
+      </div>
+    `;
+    container.appendChild(block);
+
+    const row = block.querySelector('.subject-row');
+    row.querySelector('.sgpa').addEventListener('input', ()=>updateYGPA(row));
+    row.querySelector('.credit').addEventListener('input', ()=>updateYGPA(row));
+  }
+});
