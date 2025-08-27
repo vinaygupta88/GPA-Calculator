@@ -133,6 +133,7 @@ body {
 @media (max-width: 768px) {
   .slider {
     height: 200px;
+    width: 95%;
   }
 
   .slide {

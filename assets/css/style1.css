@@ -45,7 +45,6 @@ input[type=range] {
     border-radius: 8px; 
     padding: 8px; 
 }
-
 /* ------------- Button ------------ */
 button { 
     padding: 12px 24px; 
@@ -175,4 +174,27 @@ button:hover {
 
 .grading-system td {
   font-size: 16px;
+}
+
+
+/* meadia query */
+@media (max-width: 600px) {
+  .subject-row {
+    flex-direction: column;
+  }
+
+  .subject-row input,
+  .subject-row select {
+    width: 100%;
+  }
+
+  
+  .grading-system {
+    overflow-x: auto;
+    display: block;
+  }
+
+  .grading-system table {
+    width: 600px; 
+  }
 }
