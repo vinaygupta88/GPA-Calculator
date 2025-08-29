@@ -46,6 +46,13 @@ input[type=range] {
     padding: 8px; 
 }
 /* ------------- Button ------------ */
+.button-wrapper {
+    display: flex;
+    justify-content: center;  
+    align-items: center;     
+    width: 100%;
+}
+
 button { 
     padding: 12px 24px; 
     font-size: 18px; 
@@ -53,15 +60,20 @@ button {
     color: white; 
     border: none; 
     border-radius: 6px; 
+    margin-top: 10px;
     cursor: pointer; 
-    margin-top: 10px; 
-    margin-left: 43%; 
     transition: background-color 0.3s ease; 
 }
 button:hover { 
     background-color: #1de928; 
 }
 
+@media (max-width: 600px) {
+    .button-wrapper button {
+        width: 100%;         
+        max-width: 150px;    
+    }
+}
 
 /*------------ Result -------------------*/
 .card {
