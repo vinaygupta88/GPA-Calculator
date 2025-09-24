@@ -141,7 +141,7 @@ function calculate() {
   const selected = document.querySelector('input[name="calc-type"]:checked');
   if (!selected) return alert("Please select SGPA / YGPA / CGPA");
 
-  let totalCredit=0, totalCP=0, result=0, type=selected.value.toUpperCase();
+  let totalCredit=0, totalCP=0, result=0, percentage=0, type=selected.value.toUpperCase();
 
   if (selected.value === 'sgpa') {
     document.querySelectorAll('#sgpa-container .subject-row').forEach(row=>{
@@ -165,6 +165,7 @@ function calculate() {
       totalCP += parseFloat(row.querySelector('.credit-point').value)||0;
     });
     result = totalCP/totalCredit;
+    percentage = result * 10;
   }
 
 // Show in card
@@ -173,6 +174,7 @@ document.getElementById('card-title').textContent = type + " Result";
 document.getElementById('card-credit').textContent = totalCredit;
 document.getElementById('card-cp').textContent = totalCP.toFixed(2);
 document.getElementById('card-value').textContent = result.toFixed(2);
+document.getElementById('card-value-percent').textContent = percentage.toFixed(2);
 const card = document.getElementById('result-card');
 const yOffset = -100;
 const y = card.getBoundingClientRect().top + window.pageYOffset + yOffset;
